@@ -22,7 +22,7 @@ for (var i = 1; i < 101; i++) {
     }
 };
 // qui si inserisce un tag padre <ul>
-list_unordered = '<ul class = "list-unstyled text-left">' + list + '</ul>';
+var list_unordered = '<ul class = "list-unstyled text-left">' + list + '</ul>';
 console.log(list_unordered);
 // inviamo tutto il pacchetto lista all'Html
 document.getElementById('fizzbuzztest').innerHTML = list_unordered;
