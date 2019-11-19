@@ -9,14 +9,15 @@ var list = []
 // ciclo per creare numeri da 1 a 100
 for (var i = 1; i < 101; i++) {
     var num = i;
-    list.push(num);
     if (num % 3 == 0 && num % 5 == 0) {
-        console.log('FizzBuzz');
+        num = '<il>' + 'FizzBuzz' + '</il>';
     } else if (num % 3 == 0) {
-        console.log('Fizz');
+        num = '<il>' + 'Fizz' + '</il>';
     } else if (num % 5 == 0) {
-        console.log('Buzz');
+        num = '<il>' + 'Buzz' + '</il>';
     } else {
-        console.log(num);
+        num = '<il>' + num + '</il>';
     }
+    list.push(num);
 }
+console.log(list);
