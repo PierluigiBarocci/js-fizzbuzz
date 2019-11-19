@@ -4,21 +4,25 @@
 // al posto dei multipli di 3 e 5 stampare "FizzBuzz"
 // nome repo: js-fizzbuzz
 
-// creazione array d'appoggio
+// creazione var d'appoggio
 var list = ''
 // ciclo per creare numeri da 1 a 100
 for (var i = 1; i < 101; i++) {
     var num = i;
+    // il principio è quello di creare una stringa che contenga già al suo interno dei tag <li> per html
+    // il tutto a braccetto con Bootstrap4 è una bomba a orologeria ==> SPETTACOLO PURO!!!
     if (num % 3 == 0 && num % 5 == 0) {
-        list = list + '<li>' + 'FizzBuzz' + '</li>';
+        list = list + '<li class = "list-inline-item mx-3 mb-3 text-warning bg-primary rounded">' + 'FizzBuzz' + '</li>';
     } else if (num % 3 == 0) {
-        list = list + '<li>' + 'Fizz' + '</li>';
+        list = list + '<li class = "list-inline-item mx-3 mb-3 text-primary">' + 'Fizz' + '</li>';
     } else if (num % 5 == 0) {
-        list = list + '<li>' + 'Buzz' + '</li>';
+        list = list + '<li class = "list-inline-item mx-3 mb-3 text-warning">' + 'Buzz' + '</li>';
     } else {
-        list = list + '<li>' + num + '</li>';
+        list = list + '<li class = "list-inline-item mx-3 mb-3">' + num + '</li>';
     }
 };
-list_unordered = '<ul>' + list + '</ul>';
+// qui si inserisce un tag padre <ul>
+list_unordered = '<ul class = "list-unstyled text-left">' + list + '</ul>';
 console.log(list_unordered);
+// inviamo tutto il pacchetto lista all'Html
 document.getElementById('fizzbuzztest').innerHTML = list_unordered;
