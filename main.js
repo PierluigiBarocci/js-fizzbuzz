@@ -11,7 +11,7 @@ for (var i = 1; i < 101; i++) {
     var num = i;
     // il principio è quello di creare una stringa che contenga già al suo interno dei tag <li> per html
     // il tutto a braccetto con Bootstrap4 è una bomba a orologeria ==> SPETTACOLO PURO!!!
-    if (num % 3 == 0 && num % 5 == 0) {
+    if ((num % 3 == 0) && (num % 5 == 0)) {
         list = list + '<li class = "list-inline-item mx-3 mb-3 text-warning bg-primary rounded">' + 'FizzBuzz' + '</li>';
     } else if (num % 3 == 0) {
         list = list + '<li class = "list-inline-item mx-3 mb-3 text-primary">' + 'Fizz' + '</li>';
